@@ -2,12 +2,11 @@
 <html>
 <head>
 <meta campuret="utf-8">
-<link rel="stylesheet" href="style.css">
 <title>Password Generator - JakPer</title>
-<script src="script.js" defer></script>
+<link rel="stylesheet" href="assets/style.css">
+<script src="assets/script.js" defer></script>
 </head>
 <body>
-<form id="passwordGeneratorForm">
     <div class="container">
         <header>
             <div class="menu">
@@ -25,6 +24,7 @@
                 </div>
             </header><hr>
             <h3 align="center">Password Generator</h3>
+            <form id="passwordGeneratorForm">
         <div class="result__container" title="Output">
             <span id="result"></span>
         </div><br>
@@ -32,17 +32,17 @@
         <div class="option">
             <div class="option" title="Panjang kata sandi">
                 <label>Panjang kata sandi: </label>
-                <output id="length" class="out">8</output> (default 8)<br>
-                <div class="option" title="Tinggal geser aja boy">
+                <output id="length" class="out">12</output> (default 12)<br>
+                <div class="option" title="Geser untuk menampilkan hasil">
                 5 <input type="range" id="length" min="5" max="20" value="8" step="1" oninput="range(value)"> 20
             </div>
             </div>
             <div class="option" title="Karakter yang digunakan">
                 <input type="checkbox" id="uppercase" checked>
-                <label>ABC</label>
+                <label>A-Z</label>
                 &emsp;
                 <input type="checkbox" id="numbers" checked>
-                <label>123</label>
+                <label>0-9</label>
                 &emsp;
                 <input type="checkbox" id="symbols">
                 <label>Simbol</label>
@@ -50,6 +50,7 @@
         </div>
         </fieldset><br>
         <div align="right">
+            <!-- <button class="buttonpass" >Reset</button> -->
         <input id="generate" type="submit" value="Generate Key">
         <input class="buttonpass" id="copy" type="button" value="Copy" onclick="copyText();">
         </div>
@@ -66,7 +67,7 @@
             <input type="button" class="buttonpass" onclick="Hs_about()" style="color:#000000;text-decoration:none;" value="&emsp;Hide&emsp;">
             </div>
     </div>
-    <footer class="card-footer" align="center">&copy <script type="text/javascript">document.write(new Date().getFullYear());</script> - Muhammad Jaka Permana Putra Agus<br>v1.0</footer>
+    <footer class="card-footer" align="center">&copy <script type="text/javascript">document.write(new Date().getFullYear());</script> - Muhammad Jaka Permana Putra Agus<br>v1.1</footer>
 </div>
 </body>
 </html>
